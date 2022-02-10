@@ -25,5 +25,10 @@ public class PerfilesApplication {
 		};
 	}
 
-
+	@Bean
+	CommandLineRunner execute2(ServicioImpresion servicioImpresion){
+		return args -> {
+			servicioImpresion.imprimir("Este es un texto para probar los perfiles en ejecucion");
+		};
+	}
 }
